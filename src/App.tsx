@@ -6,6 +6,11 @@ import "./App.css";
 function App() {
   const [count, setCount] = useState(0);
 
+  // reset button
+  const reset: () => void = () => {
+    // set the count to 0
+    setCount(0);
+  };
   return (
     <>
       <div>
@@ -29,11 +34,7 @@ function App() {
           set onClick to the function 
           */}
 
-          <button
-          // onClick={ }
-          >
-            Reset
-          </button>
+          <button onClick={reset}>Reset</button>
         </div>
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
